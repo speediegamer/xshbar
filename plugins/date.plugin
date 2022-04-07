@@ -6,7 +6,7 @@ VERSION="0.1"
 getdate()
 {
   date_time="$(date +%T)"
-  date_date="$(date +%d/%m/%Y/%t)"
+  date_date="$(date +%d/%m/%Y)"
   date_currentday="$(date +%A)"
   date_currentday_num="$(date +%u)"
   date_hour="$(date +%H)"
