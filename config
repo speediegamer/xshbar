@@ -1,2 +1,3 @@
 # xshbar config file
-XSHBAR_CORE_DISPLAY="" # This is what will be printed. 
+XSHBAR_CORE_DISPLAY=""
+# This is what will be printed. Do not put commands here, but you can use variables from plugins as long as they're imported.
