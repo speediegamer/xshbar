@@ -9,6 +9,7 @@ help:
 
 install:
 	mkdir -pv ${INSTALL_DIR}/xshbar
+	mkdir -pv ${INSTALL_DIR}/xshbar/plugins.use
 	cp -r * ${INSTALL_DIR}/xshbar
 	chmod +x ${INSTALL_DIR}/xshbar/${NAME}
 	chmod +x ${INSTALL_DIR}/xshbar/prn
