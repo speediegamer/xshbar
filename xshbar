@@ -6,6 +6,7 @@ XSHBAR_INIT()
 {
   echo "xshbar has started." && XSHBAR_VAR_HASSTARTED=true
   export LOAD=.
+  export PLUGDIR=$XSHBAR_VAR_DOTDIR/plugins
 }
 
 XSHBAR_SOURCE()
