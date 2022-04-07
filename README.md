@@ -28,7 +28,7 @@ and then you will be able to see all available plugins. Let's say we want date.p
 
 You can now vim into that file and see all of its variables. We can mention these in the file we're about to edit.
 
-##### cd ~/.config/zshbar && vim prn
+##### cd ~/.config/xshbar && vim prn
 
 prn is the file which contains what we will be printing.
 
@@ -38,6 +38,11 @@ This is an example of what it can print. You can type plain text in XSHBAR_CORE_
 You can also print the output of a command by using 
   
 $(echo foo)
+
+##### vim ~/.config/xshbar/xshbar
+
+![image](https://user-images.githubusercontent.com/71722170/162249304-d0c9dd0e-a4aa-4757-bc97-7aee71717084.png)
+Add your plugins to XSHBAR_IMPORT() like shown in the screenshot above.
 
 When you're done, save the file, and kill your X session and startx. Enjoy!
   
