@@ -4,7 +4,8 @@
 # written by speedie, licensed under MIT.
 XSHBAR_INIT()
 {
-  echo "xshbar has started." && XSHBAR_VAR_HASSTARTED=true 
+  echo "xshbar has started." && XSHBAR_VAR_HASSTARTED=true
+  export LOAD=.
 }
 
 XSHBAR_SOURCE()
