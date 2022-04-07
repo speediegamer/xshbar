@@ -1,4 +1,0 @@
-# xshbar plugins
-# This is where you load plugins
-# Example: $LOAD /path/to/plugin
-$LOAD $PLUGDIR/testplugin.plugin
