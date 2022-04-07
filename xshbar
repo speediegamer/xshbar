@@ -11,8 +11,15 @@ XSHBAR_INIT()
 XSHBAR_SOURCE()
 {
   . ~/.config/xshbar/config || . $XSHBAR_VAR_DOTDIR/config # Import config
-  . ~/.config/xshbar/plugins.use/* || . $PLUGDIR/* # Import plugins
+  XSHBAR_IMPORT || . $PLUGDIR/* # Import plugins
   . ~/.config/xshbar/prn || . $XSHBAR_VAR_DOTDIR/prn # Import print buffer
+}
+
+XSHBAR_IMPORT()
+{
+  #Add plugins like this.
+  #$PLUGDIR/date.plugin
+  #$PLUGDIR/ramstatus.plugin
 }
 
 XSHBAR_DIE()
