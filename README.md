@@ -42,6 +42,7 @@ $(echo foo)
 ##### vim ~/.config/xshbar/xshbar
 
 ![image](https://user-images.githubusercontent.com/71722170/162249304-d0c9dd0e-a4aa-4757-bc97-7aee71717084.png)
+
 Add your plugins to XSHBAR_IMPORT() like shown in the screenshot above.
 
 When you're done, save the file, and kill your X session and startx. Enjoy!
