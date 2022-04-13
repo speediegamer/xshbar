@@ -1,7 +1,7 @@
 # xshbar
 #### Customizable xsetroot bar designed to be used with window managers.
 
-![image](https://user-images.githubusercontent.com/71722170/162229643-7693f9b6-4e72-4d65-a397-975b8a605b2d.png)
+![image](https://user-images.githubusercontent.com/71722170/163266938-2ea4cb81-9267-402f-8473-256138a94ff4.png)
 
 #### Installation
 - Install git
