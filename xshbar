@@ -1,26 +1,28 @@
 #!/bin/sh
 # xshbar
 # customizable xsetroot bar for window managers
-# written by speedie, licensed under MIT.
+# written by speedie, licensed under GNU GPLv3.
 ###################################################>
 XSHBAR_INIT()
 {
-  echo "xshbar has started." && XSHBAR_VAR_HASSTARTED=true
+  printf "xshbar has started." && XSHBAR_VAR_HASSTARTED=true
 }
 
 XSHBAR_SOURCE()
 {
   . ~/.config/xshbar/config || . $XSHBAR_VAR_DOTDIR/config # Import config
-  XSHBAR_IMPORT || . $PLUGDIR/* # Import plugins
+  XSHBAR_IMPORT || . $PLUGDIR/* # Import plugins, sourcing the file is a legacy support thing
   . ~/.config/xshbar/prn || . $XSHBAR_VAR_DOTDIR/prn # Import print buffer
 }
 
 XSHBAR_IMPORT()
 {
-  #Add plugins like this.
-  #$PLUGDIR/date.plugin
-  #$PLUGDIR/ramstatus.plugin
+  . $PLUGDIR/testplugin.plugin 
 }
+
+case "$testprint" in
+"") echo "WARNING: Test plugin not present. This may mean plugins aren't imported. Did you forget to create the plugins.use directory? If you've done that, make sure your plugins are defined. If you don't wanna have the test plugin, simply ignore this error." ;; 
+esac
 
 XSHBAR_DIE()
 {
@@ -44,8 +46,9 @@ XSHBAR_CHECK_DEP || XSHBAR_DIE
 
 XSHBAR_SET_ROOT()
 {
+  XSHBAR_IMPORT
+  . ~/.config/xshbar/prn
   XSHBAR_CORE_PRINT=$(echo $XSHBAR_CORE_DISPLAY)
-  XSHBAR_SOURCE || XSHBAR_DIE
   xsetroot -name "$XSHBAR_CORE_PRINT" || XSHBAR_DIE
   sleep $UPDATEFREQ || XSHBAR_DIE
   XSHBAR_SET_ROOT || XSHBAR_DIE
