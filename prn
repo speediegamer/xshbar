@@ -1,3 +1,0 @@
-XSHBAR_CORE_DISPLAY="" # The contents of this line will be printed.
-# You may use variables AND commands but ONLY if it's inside a variable $(echo "Like this.")
-# You can also use any variables set by plugins.
