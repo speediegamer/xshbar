@@ -1,6 +1,6 @@
 SHELL = /bin/sh
 
-INSTALL_DIR = /usr/bin
+PREFIX = /usr
 NAME = xshbar
 
 help:
@@ -8,8 +8,8 @@ help:
 	@echo "make uninstall        Remove xshbar."
 
 install:
-	cp ${NAME} ${INSTALL_DIR}/bin
-	chmod +x ${INSTALL_DIR/bin/${NAME}
+	cp ${NAME} ${DESTDIR}${PREFIX}/bin
+	chmod +x ${DESTDIR}${PREFIX}/bin/${NAME}
 
 uninstall:
-	rm -f ${INSTALL_DIR}/${NAME}
+	rm -f ${DESTDIR}${PREFIX}/bin/${NAME}
