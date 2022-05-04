@@ -5,7 +5,7 @@
 
 XSHBAR_INIT()
 {
-  XSHBAR_VERS=0.1
+  XSHBAR_VERS=0.2
   printf "xshbar has started." && XSHBAR_VAR_HASSTARTED=true
 }
 
@@ -67,6 +67,19 @@ XSHBAR_SET_ROOT()
   sleep $UPDATEFREQ || XSHBAR_DIE
   XSHBAR_SET_ROOT || XSHBAR_DIE
 }
+
+XSHBAR_REFRESH()
+{
+  XSHBAR_IMPORT
+  . ~/.config/xshbar/prn
+  XSHBAR_CORE_PRINT=$(echo $XSHBAR_CORE_DISPLAY)
+  exit 0
+}
+
+# Refresh feature
+case "$1" in
+"-r") XSHBAR_REFRESH ;;
+esac
 
 XSHBAR_SET_ROOT
 XSHBAR_END
